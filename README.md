@@ -95,10 +95,14 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 '''
 
 Además de todos estas mejoras, también debo revisar el trabajo anterior:
-Todo el proceso se puede ver en: 
-- [limpieza de accidentes (1)](https://www.kaggle.com/code/leonardoperezhurtado/limpieza-accidentes-palmira-1) 
+Todo el proceso se puede ver en:
+
+- [limpieza de accidentes (1)](https://www.kaggle.com/code/leonardoperezhurtado/limpieza-accidentes-palmira-1)
+
 - [Limpieza de accidentes (2)](https://www.kaggle.com/code/leonardoperezhurtado/limpieza-accidentes-palmira-2)
+  
 - [Trabajando con los datos de los accidentes (3)](https://www.kaggle.com/code/leonardoperezhurtado/datos-accidentes-palmira-3)
+
 ---
 
 > &copy; 2025 Twitter: [@leoperezx](https://twitter.com/leoperezx)
