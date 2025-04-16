@@ -18,7 +18,7 @@
 
 La siguiente imágen es una captura de la aplicación en funcionamiento. 
 
-<img title="" src="file:///home/xue/Documentos/Algoritmos/Python/Accidentes/streamlit/accidentes2020/add/Captura.png" alt="" width="659" data-align="center">
+<img title="" src="add/Captura.png" alt="" width="659" data-align="center">
 
 ### Recomendaciones de IA
 
