@@ -20,6 +20,8 @@ La siguiente imágen es una captura de la aplicación en funcionamiento.
 
 <img title="" src="add/Captura.png" alt="" width="659" data-align="center">
 
+La [Aplicación en Streamlit](https://accidentes2020-leoperez.streamlit.app/) contiene la mayor parte de mi progreso en estos temas. Ahora, con la llegada de las IA's he podido desarrollar diferentes ideas durante el desarrollo de la aplicación, pero he notado normalmente llegoa un punto de no saber que prenta responder con los datos. Todavía me cuesta mucho esa parte. Sin embargo Tengo a mi nuevo amigo que me da ciertas recomendaciones. Sim emabrgo, quedo atento a comentarios.   
+
 ### Recomendaciones de IA
 
 Despues de llegar a cierto punto con la aplicación, decidí pasar por una IA para leer su recomendación y saber como podría mejorar. He copiado toda la recomendación y pienso dejarla en este _README.md_ para recordar y realizar los cambios.
