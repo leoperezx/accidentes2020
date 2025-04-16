@@ -14,9 +14,9 @@
 
 - streamlit_folium
 
-### Captura
+## Captura
 
-La siguiente imágen es una captura de la aplicación en funcionamiento. 
+La siguiente imágen es una captura de la aplicación en funcionamiento.
 
 <img title="" src="add/Captura.png" alt="" width="659" data-align="center">
 
@@ -26,8 +26,9 @@ Despues de llegar a cierto punto con la aplicación, decidí pasar por una IA pa
 
 A medida que realice los cambios que me parezcan apropiados, seguramente los voy a ir borrando del texto.
 
-''' _respuesta de la IA_
+### respuesta de la IA
 
+```markdown
 **Organización y Estructura:**
 
 1. **Carpeta para Componentes Streamlit (Opcional pero Recomendable):** Si tu aplicación sigue creciendo y tienes lógica de interfaz de usuario más compleja, podrías considerar crear una carpeta para componentes personalizados de Streamlit. Por ejemplo, podrías tener funciones que generen selectores específicos, tarjetas de información, etc.
@@ -41,10 +42,9 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 1. **Manejo de Errores y Valores Faltantes:** En tus funciones de generación de gráficos, podrías añadir manejo para casos donde la columna especificada no exista en el DataFrame o tenga valores faltantes que puedan causar errores en la visualización.
 
 2. **Flexibilidad en las Gráficas:** La función `generar_grafica_por_columna` es muy útil. Podrías hacerla aún más flexible permitiendo pasar argumentos adicionales a `plotly.express.bar`, como el título o los nombres de los ejes, directamente desde `main.py`.
-   
-   Python
-   
-   ```
+```
+
+```Python
    # En funciones.py
    def generar_grafica_por_columna(df, columna, etiqueta_en_x, titulo=None, color=None):
       distribucion = df[columna].value_counts().reset_index(name='Número de Accidentes')
@@ -58,6 +58,7 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
       st.plotly_chart(fig_dia)
    ```
 
+```markdown
 3. **Separación de Lógica de Filtrado en el Mapa:** En la función `generar_mapa`, la lógica de filtrado (`data_filter = data.loc[data['GRAVEDAD'].isin(opciones)]`) se realiza dentro de la función. Podrías considerar pasar el DataFrame ya filtrado a la función `generar_mapa` desde `main.py`. Esto haría la función más reutilizable si quisieras mostrar mapas de otros subconjuntos de datos.
 
 4. **Personalización del Mapa:** Podrías permitir más opciones de personalización del mapa desde `main.py`, como el zoom inicial, los colores de los marcadores, o incluso la elección de diferentes tipos de mapas base (`tiles`).
@@ -67,7 +68,7 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 1. **Mejor Organización del Layout:** A medida que añades más visualizaciones y controles, considera usar las utilidades de layout de Streamlit como `st.columns`, `st.expander`, y `st.tabs` para organizar la información de manera más clara y evitar que la página se vuelva demasiado larga y confusa.
 
 2. **Interactividad Avanzada:** Explora más los widgets de Streamlit para hacer la aplicación más interactiva. Por ejemplo:
-   
+
    - **Selectores Múltiples:** Permitir al usuario seleccionar múltiples barrios o tipos de vehículos para filtrar los análisis.
    - **Sliders:** Para filtrar por rangos de horas o fechas (si tuvieras un rango de años más amplio).
    - **Botones para Acciones:** Disparar análisis o visualizaciones específicas bajo demanda.
@@ -75,7 +76,7 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 3. **Manejo de Fechas:** Si bien ya convertiste la columna 'FECHA' a datetime, podrías añadir selectores de rango de fechas para permitir al usuario analizar períodos específicos dentro del año 2020.
 
 4. **Visualizaciones Adicionales:** Considera otras visualizaciones que podrían ser interesantes:
-   
+
    - **Gráficos de dispersión:** Para explorar la relación entre dos variables (si tiene sentido en tu conjunto de datos).
    - **Mapas de calor:** Para visualizar la concentración de accidentes en diferentes áreas de Palmira.
    - **Gráficos de barras apiladas o agrupadas:** Para comparar la distribución de una variable (ej. gravedad) dentro de diferentes categorías (ej. día de la semana).
@@ -92,7 +93,9 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 
 2. **Comunidad Streamlit:** Explora la comunidad de Streamlit (foros, documentación, ejemplos). Hay muchos recursos y ejemplos de proyectos similares que te pueden dar ideas.
 
-'''
+```
+
+## Trabajos anteriores
 
 Además de todos estas mejoras, también debo revisar el trabajo anterior:
 Todo el proceso se puede ver en:

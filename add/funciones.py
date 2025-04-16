@@ -1,5 +1,5 @@
 # Este archivo es un complemento solo con funciones para el archivo principal main.py
-
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 from streamlit_folium import folium_static
@@ -43,6 +43,45 @@ def generar_grafica_por_columna(df,columna,etiqueta_en_x):
     distribucion_dia = df[columna].value_counts().reset_index(name='Número de Accidentes')
     distribucion_dia.columns = [etiqueta_en_x, 'Número de Accidentes']
     fig = px.bar(distribucion_dia, x=etiqueta_en_x, y='Número de Accidentes', title='Distribución de Accidentes por '+etiqueta_en_x)
+    return fig
+
+def generar_grafica_hora_plotly(df):
+    """
+    Genera una gráfica de barras de la distribución de accidentes por hora usando Plotly Express.
+    Asume que la columna 'HORA' contiene información de la hora en formato HH:MM:SS.
+
+    Args:
+        df (pd.DataFrame): DataFrame con la columna 'HORA' en formato string (HH:MM:SS).
+
+    Returns:
+        plotly.graph_objects._figure.Figure: Objeto de figura de Plotly.
+    """
+    if 'HORA' not in df.columns:
+        st.warning("La columna 'HORA' no se encuentra en los datos.")
+        return None
+
+    # Extraer la hora como entero
+    df['HORA_SOLO'] = df['HORA'].str.split(':').str[0].astype(int)
+
+    # Contar la frecuencia de accidentes por hora y ordenar por hora
+    accidentes_por_hora = df['HORA_SOLO'].value_counts().sort_index().reset_index()
+    accidentes_por_hora.columns = ['Hora del Día', 'Cantidad de Accidentes']
+
+    # Crear la gráfica de barras con Plotly Express
+    fig = px.bar(accidentes_por_hora,
+                 x='Hora del Día',
+                 y='Cantidad de Accidentes',
+                 title='Distribución de Accidentes por Hora en Palmira',
+                 labels={'Hora del Día': 'Hora del Día', 'Cantidad de Accidentes': 'Cantidad de Accidentes'})
+
+    # Personalizar la gráfica
+    fig.update_xaxes(type='category', tickvals=list(range(24)))
+    fig.update_layout(yaxis_title='Cantidad de Accidentes',
+                      xaxis_title='Hora del Día',
+                      title_font=dict(size=16),
+                      xaxis=dict(tickmode='array', tickvals=list(range(24))),
+                      yaxis=dict(gridcolor='lightgray'))
+
     return fig
 
 def generar_mapa(data,opciones):

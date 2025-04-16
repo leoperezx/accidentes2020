@@ -10,7 +10,9 @@ import folium
 # variables 
 IMAGE = Image.open('add/img-map.jpg')
 APP_FINAL = '''
-Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para el análisis como para temas laborales<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo, estudio mientras construyo. Veras muchos cambios a lo largo de este proyecto. **Esto es de prueba y error**. En el siguiente enlace se encuentra los archivos base de [este trabajo y el trabajo previo](https://github.com/leoperezx/accidentes2020/tree/main). Gracias por llegar hasta aquí y estar interesado. 
+El mapa presenta los distinto accidentes de motocicletas. Si le das click a cada punto, podrás conocer la hipotesis y la gravedad del accidente. Puedes seleccionear uno o varios tipo de gravedad de accidentes y hasta presentar todos los accidentes en el mapa. El mapa es interactivo y pudes acercarte y explorar mas de cerca con cada uno de los puntos.\n\n
+Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para el análisis como para temas laborales<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo, estudio mientras construyo.\n\n
+Veras muchos cambios a lo largo de este proyecto. **Esto es de prueba y error**. En el siguiente enlace se encuentra los archivos base de [este trabajo y el trabajo previo](https://github.com/leoperezx/accidentes2020/tree/main). Gracias por llegar hasta aquí y estar interesado. 
 '''
 
 FIRMA = '''
@@ -20,7 +22,7 @@ FIRMA = '''
 
 
 
-CONCLUCIONES = "En general los accidentes aumentan al ir finalizando el año. Se presentan con menor frecuencia en los meses de Abril, Mayo y Junio. Es notable el ascenso de los accidentes a partir de Julio. en genral los días más comunes para los accidentes son los Lunes y los viernes de motocicletas son muy numerosos y sobrepasan más del 50 por ciento de todos los registros. Las motocicleas numeroso entre todos los vahículos de los cuales hay regsistro. Es probable que ."
+CONCLUCIONES = "En general los accidentes aumentan al ir finalizando el año. Se presentan con menor frecuencia en los meses de Abril, Mayo y Junio. Es notable el ascenso de los accidentes a partir de Julio. en genral los días más comunes para los accidentes son los Lunes y los viernes, donde los accidentes de motocicletas son muy numerosos alcanzando una cifra cercana al 50 \% de todos los registros. \n \nLos accidentes en motocicletas tienen la mista tendencia al registro general, con muchos accidentes al final y principio del año donde y la mayoría se presentaron entre las 11 y las 12 horas del día, junto con otro pico entre las 13 y las 14 horas del día. Sin embargo los días más comunes para los accidentes en motocicleta en el año 2020 fueron los días Viernes y Lunes."
 
 def main():
     # Título de la aplicación
@@ -79,7 +81,14 @@ def main():
     else:
         st.warning("La columna 'HIPOTESIS' no se encuentra en los datos para mostrar la distribución.")
 
-    
+    # Ejemplo de cómo usar esta función en tu main.py
+    if 'HORA' in data.columns:
+        fig_hora_plotly = fn.generar_grafica_hora_plotly(data.copy()) # Usa .copy() para evitar modificar el DataFrame original
+        if fig_hora_plotly:
+            st.plotly_chart(fig_hora_plotly)
+    else:
+        st.warning("La columna 'HORA' no se encuentra en los datos para mostrar la distribución por hora.")
+
     # --- Sección de Análisis Específico de Motocicletas ---
     st.header("Análisis Específico de Accidentes de Motocicletas")
 
@@ -126,7 +135,7 @@ def main():
     # --- Conclusiones y Recomendaciones ---
     st.header("Conclusiones y Recomendaciones")
     st.write(CONCLUCIONES)
-
+    st.markdown("---")
     st.subheader("Mapa interactivo de accidentes de motocicletas - Palmira 2020")
     data_filter = data[(data['CLASE_DE_VEHICULO']=='MOTO')] # DAÑOS,HERIDOS,MUERTO
 
