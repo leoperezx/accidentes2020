@@ -20,7 +20,7 @@ La siguiente imágen es una captura de la aplicación en funcionamiento.
 
 <img title="" src="add/Captura.png" alt="" width="659" data-align="center">
 
-La [Aplicación en Streamlit](https://accidentes2020-leoperez.streamlit.app/) contiene la mayor parte de mi progreso en estos temas. Ahora, con la llegada de las IA's he podido desarrollar diferentes ideas durante el desarrollo de la aplicación, pero he notado normalmente llegoa un punto de no saber que prenta responder con los datos. Todavía me cuesta mucho esa parte. Sin embargo Tengo a mi nuevo amigo que me da ciertas recomendaciones. Sim emabrgo, quedo atento a comentarios.   
+La [Aplicación en Streamlit](https://accidentes2020-leoperez.streamlit.app/) contiene la mayor parte de mi progreso en estos temas. Ahora, con la llegada de las IA's he podido desarrollar diferentes ideas durante el proceso de creación de la aplicación, pero, todavía me cuesta mucho la parte donde no sé que hacer con tandos datos y que responder con los datos. Sin embargo Tengo a mi nuevo _amigo digital_ que me da ciertas recomendaciones no sin antes, quedar atento a los comentarios hechos por humanos reales.   
 
 ### Recomendaciones de IA
 
