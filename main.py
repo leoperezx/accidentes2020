@@ -10,7 +10,6 @@ import folium
 # variables 
 IMAGE = Image.open('add/img-map.jpg')
 APP_FINAL = '''
-El mapa presenta los distinto accidentes de motocicletas. Si le das click a cada punto, podrás conocer la hipotesis y la gravedad del accidente. Puedes seleccionear uno o varios tipo de gravedad de accidentes y hasta presentar todos los accidentes en el mapa. El mapa es interactivo y pudes acercarte y explorar mas de cerca con cada uno de los puntos.\n\n
 Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para el análisis como para temas laborales<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo, estudio mientras construyo.\n\n
 Veras muchos cambios a lo largo de este proyecto. **Esto es de prueba y error**. En el siguiente enlace se encuentra los archivos base de [este trabajo y el trabajo previo](https://github.com/leoperezx/accidentes2020/tree/main). Gracias por llegar hasta aquí y estar interesado. 
 '''
@@ -20,9 +19,9 @@ FIRMA = '''
 > &copy; 2025 Twitter: [@leoperezx](https://twitter.com/leoperezx)
 '''
 
+PRESENTACION_MAPA = "El mapa presenta los distinto accidentes de motocicletas. Si le das click a cada punto, podrás conocer la hipotesis y la gravedad del accidente. Puedes seleccionear uno o varios tipo de gravedad de accidentes hasta presentar todos los accidentes en el mapa. El mapa es interactivo y pudes acercarte y explorar mas de cerca con cada uno de los puntos."
 
-
-CONCLUCIONES = "En general los accidentes aumentan al ir finalizando el año. Se presentan con menor frecuencia en los meses de Abril, Mayo y Junio. Es notable el ascenso de los accidentes a partir de Julio. en genral los días más comunes para los accidentes son los Lunes y los viernes, donde los accidentes de motocicletas son muy numerosos alcanzando una cifra cercana al 50 \% de todos los registros. \n \nLos accidentes en motocicletas tienen la mista tendencia al registro general, con muchos accidentes al final y principio del año donde y la mayoría se presentaron entre las 11 y las 12 horas del día, junto con otro pico entre las 13 y las 14 horas del día. Sin embargo los días más comunes para los accidentes en motocicleta en el año 2020 fueron los días Viernes y Lunes."
+CONCLUCIONES = "En general los accidentes aumentan al ir finalizando el año. Se presentan con menor frecuencia en los meses de Abril, Mayo y Junio. Es notable el ascenso de los accidentes a partir de Julio. en general los días más comunes para los accidentes son los lunes y los viernes, donde los accidentes de motocicletas son muy numerosos, alcanzando una cifra cercana al 50 \% de todos los registros. \n \nLos accidentes en motocicletas tienen la misma tendencia al registro general, con muchos accidentes al final y principio del año, donde y la mayoría de accidentes en motocicleta se presentaron entre las 11 y las 12 horas del día, junto con otro pico entre las 13 y las 14 horas del día. Sin embargo los días más comunes para los accidentes en motocicleta en el año 2020 fueron los días Viernes y Lunes."
 
 def main():
     # Título de la aplicación
@@ -137,6 +136,7 @@ def main():
     st.write(CONCLUCIONES)
     st.markdown("---")
     st.subheader("Mapa interactivo de accidentes de motocicletas - Palmira 2020")
+    st.write(PRESENTACION_MAPA)
     data_filter = data[(data['CLASE_DE_VEHICULO']=='MOTO')] # DAÑOS,HERIDOS,MUERTO
 
     options = st.multiselect('¿Gravedad de accidente en motocicleta que desea consultar?',
