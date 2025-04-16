@@ -2,7 +2,7 @@
 
 *Resumen*: Análisis de los accidentes de vehículos del año 2020 en la ciudad de Palmira, Valle, Colombia
 
-*Descripción*: La siguiente aplicación es un trabajo en proceso de construcción ya que también es un ejercicio académico personal que ya lleva varios años. Me interesa aprendender sobre programación en _Python_, el anális de datos con _Pandas_ y la forma de representarlos de una forma clara y comprensible para cualquier persona con *Streamlit*. Creo que esta combinación de herramientas es ideal para aprender sobre el _Análisis de datos_ es por eso que dejo aquí un pequeño desarrollo con el cual demuestro mi habilidad con el animo de seguir mejorando y practicando.  
+*Descripción*: La siguiente aplicación es un trabajo en proceso de construcción ya que también es un ejercicio académico personal que ya lleva varios años. Me interesa aprendender sobre programación en *Python*, el anális de datos con *Pandas* y la forma de representarlos de una forma clara y comprensible para cualquier persona con *Streamlit*. Creo que esta combinación de herramientas es ideal para aprender sobre el *Análisis de datos* es por eso que dejo aquí un pequeño desarrollo con el cual demuestro mi habilidad con el animo de seguir mejorando y practicando.  
 
 *Requerimientos*:
 
@@ -20,11 +20,11 @@ La siguiente imágen es una captura de la aplicación en funcionamiento.
 
 <img title="" src="add/Captura.png" alt="" width="659" data-align="center">
 
-La [Aplicación en Streamlit](https://accidentes2020-leoperez.streamlit.app/) contiene la mayor parte de mi progreso en estos temas. Ahora, con la llegada de las IA's he podido desarrollar diferentes ideas durante el proceso de creación de la aplicación, pero, todavía me cuesta mucho la parte donde no sé que hacer con tandos datos y que responder con los datos. Sin embargo Tengo a mi nuevo _amigo digital_ que me da ciertas recomendaciones no sin antes, quedar atento a los comentarios hechos por humanos reales.   
+La [Aplicación en Streamlit](https://accidentes2020-leoperez.streamlit.app/) contiene la mayor parte de mi progreso en estos temas. Ahora, con la llegada de las IA's he podido desarrollar diferentes ideas durante el proceso de creación de la aplicación, pero, todavía me cuesta mucho la parte donde no sé que hacer con tandos datos y que responder con los datos. Sin embargo Tengo a mi nuevo *amigo digital* que me da ciertas recomendaciones no sin antes, quedar atento a los comentarios hechos por humanos reales.
 
 ### Recomendaciones de IA
 
-Despues de llegar a cierto punto con la aplicación, decidí pasar por una IA para leer su recomendación y saber como podría mejorar. He copiado toda la recomendación y pienso dejarla en este _README.md_ para recordar y realizar los cambios.
+Despues de llegar a cierto punto con la aplicación, decidí pasar por una IA para leer su recomendación y saber como podría mejorar. He copiado toda la recomendación y pienso dejarla en este *README.md* para recordar y realizar los cambios.
 
 A medida que realice los cambios que me parezcan apropiados, seguramente los voy a ir borrando del texto.
 
