@@ -9,7 +9,9 @@ import folium
 
 # variables 
 IMAGE = Image.open('add/img-map.jpg')
-APP_FINAL = "Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para análisis como laboral<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo. Veras muchos cambios. **Esto es de prueba y error**."
+APP_FINAL = "Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para el análisis como para temas laborales<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo, estudio mientras construyo. Veras muchos cambios a lo largo de este proyecto. **Esto es de prueba y error**."
+
+CONCLUCIONES = "Es notable como los accidentes de motocicletas son muy numerosos y sobrepasan más del 50 por ciento de todos los registros. Las motocicleas numeroso entre todos los vahículos de los cuales hay regsistro. Es probable que ."
 
 def main():
     # Título de la aplicación
@@ -50,7 +52,7 @@ def main():
     # distribución por Clase de vehículo
     if 'CLASE_DE_VEHICULO' in data.columns:
         
-        fig_vehiculos = fn.generar_grafica_por_columna(data,'CLASE_DE_VEHICULO','Clase de vhículos')
+        fig_vehiculos = fn.generar_grafica_por_columna(data,'CLASE_DE_VEHICULO','Clase de vehículos')
         st.plotly_chart(fig_vehiculos)
     else:
         st.warning("La columna 'CLASE_DE_VEHICULO' no se encuentra en los datos para mostrar la distribución.")
@@ -113,7 +115,7 @@ def main():
 
     # --- Conclusiones y Recomendaciones ---
     st.header("Conclusiones y Recomendaciones")
-    st.write("Es notable como los accidentes de motocicletas son el porcentaje más numeroso entre todos los vahículos de los cuales hay regsistro. Es probable que .")
+    st.write(CONCLUCIONES)
 
     st.subheader("Mapa interactivo de accidentes de motocicletas - Palmira 2020")
     data_filter = data[(data['CLASE_DE_VEHICULO']=='MOTO')] # DAÑOS,HERIDOS,MUERTO
