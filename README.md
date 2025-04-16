@@ -4,7 +4,7 @@
 
 *Descripción*: La siguiente aplicación es un trabajo en proceso de construcción ya que también es un ejercicio académico personal que ya lleva varios años. Me interesa aprendender sobre programación en _Python_, el anális de datos con _Pandas_ y la forma de representarlos de una forma clara y comprensible para cualquier persona con *Streamlit*. Creo que esta combinación de herramientas es ideal para aprender sobre el _Análisis de datos_ es por eso que dejo aquí un pequeño desarrollo con el cual demuestro mi habilidad con el animo de seguir mejorando y practicando.  
 
-*Requerimientos*: 
+*Requerimientos*:
 
 - pandas
 
@@ -24,11 +24,9 @@ La siguiente imágen es una captura de la aplicación en funcionamiento.
 
 Despues de llegar a cierto punto con la aplicación, decidí pasar por una IA para leer su recomendación y saber como podría mejorar. He copiado toda la recomendación y pienso dejarla en este _README.md_ para recordar y realizar los cambios.
 
-
-
 A medida que realice los cambios que me parezcan apropiados, seguramente los voy a ir borrando del texto.
 
-'''
+''' _respuesta de la IA_
 
 **Organización y Estructura:**
 
@@ -96,6 +94,11 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 
 '''
 
+Además de todos estas mejoras, también debo revisar el trabajo anterior:
+Todo el proceso se puede ver en: 
+- [limpieza de accidentes (1)](https://www.kaggle.com/code/leonardoperezhurtado/limpieza-accidentes-palmira-1) 
+- [Limpieza de accidentes (2)](https://www.kaggle.com/code/leonardoperezhurtado/limpieza-accidentes-palmira-2)
+- [Trabajando con los datos de los accidentes (3)](https://www.kaggle.com/code/leonardoperezhurtado/datos-accidentes-palmira-3)
 ---
 
 > &copy; 2025 Twitter: [@leoperezx](https://twitter.com/leoperezx)
