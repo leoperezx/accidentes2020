@@ -9,9 +9,18 @@ import folium
 
 # variables 
 IMAGE = Image.open('add/img-map.jpg')
-APP_FINAL = "Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para el análisis como para temas laborales<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo, estudio mientras construyo. Veras muchos cambios a lo largo de este proyecto. **Esto es de prueba y error**."
+APP_FINAL = '''
+Quedo atento a comentarios, preguntas, dudas, críticas constructivas, felicitaciones, ayuda y apoyo tanto en ideas para el análisis como para temas laborales<br><br>Todavía exisite mucha información sin analizar, muchas operaciones a realizar y funciones por aprender. Programo mientras aprendo, estudio mientras construyo. Veras muchos cambios a lo largo de este proyecto. **Esto es de prueba y error**. En el siguiente enlace se encuentra los archivos base de [este trabajo y el trabajo previo](https://github.com/leoperezx/accidentes2020/tree/main). Gracias por llegar hasta aquí y estar interesado. 
+'''
 
-CONCLUCIONES = "Es notable como los accidentes de motocicletas son muy numerosos y sobrepasan más del 50 por ciento de todos los registros. Las motocicleas numeroso entre todos los vahículos de los cuales hay regsistro. Es probable que ."
+FIRMA = '''
+--- 
+> &copy; 2025 Twitter: [@leoperezx](https://twitter.com/leoperezx)
+'''
+
+
+
+CONCLUCIONES = "En general los accidentes aumentan al ir finalizando el año. Se presentan con menor frecuencia en los meses de Abril, Mayo y Junio. Es notable el ascenso de los accidentes a partir de Julio. en genral los días más comunes para los accidentes son los Lunes y los viernes de motocicletas son muy numerosos y sobrepasan más del 50 por ciento de todos los registros. Las motocicleas numeroso entre todos los vahículos de los cuales hay regsistro. Es probable que ."
 
 def main():
     # Título de la aplicación
@@ -70,6 +79,7 @@ def main():
     else:
         st.warning("La columna 'HIPOTESIS' no se encuentra en los datos para mostrar la distribución.")
 
+    
     # --- Sección de Análisis Específico de Motocicletas ---
     st.header("Análisis Específico de Accidentes de Motocicletas")
 
@@ -122,13 +132,15 @@ def main():
 
     options = st.multiselect('¿Gravedad de accidente en motocicleta que desea consultar?',
         ['DAÑOS','HERIDOS','MUERTO'],key="selection")
-    
+
     if st.button("Crear mapa"):
         mapa = fn.generar_mapa(data_filter,options)
         folium_static(mapa)
     else: 
         st.image(IMAGE, width=600, caption="Imagen provicional")
-    st.markdown(APP_FINAL, True)
+    
+    st.write(APP_FINAL)
+    st.markdown(FIRMA)
 
 if __name__=="__main__":
     main()
