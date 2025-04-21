@@ -58,5 +58,6 @@ podrías añadir manejo para casos donde la columna especificada no exista en el
 o tenga valores faltantes que puedan causar errores en la visualización.
 
 2. **Flexibilidad en las Gráficas:** La función `generar_grafica_por_columna` es muy útil. 
-Podrías hacerla aún más flexible permitiendo pasar argumentos adicionales a `plotly.express.bar`, 
-como el título o los nombres de los ejes, directamente desde `main.py`.
+Podrías hacerla aún más flexible permitiendo pasar argumentos adicionales a 
+`plotly.express.bar`, como el título o los nombres de los ejes, directamente desde `main.py`.
+```
