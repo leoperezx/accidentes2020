@@ -53,6 +53,10 @@ Esto facilita la comprensión y el uso futuro de tus funciones.
 
 **Funciones (`funciones.py`):**
 
-1. **Manejo de Errores y Valores Faltantes:** En tus funciones de generación de gráficos, podrías añadir manejo para casos donde la columna especificada no exista en el DataFrame o tenga valores faltantes que puedan causar errores en la visualización.
+1. **Manejo de Errores y Valores Faltantes:** En tus funciones de generación de gráficos, 
+podrías añadir manejo para casos donde la columna especificada no exista en el DataFrame 
+o tenga valores faltantes que puedan causar errores en la visualización.
 
-2. **Flexibilidad en las Gráficas:** La función `generar_grafica_por_columna` es muy útil. Podrías hacerla aún más flexible permitiendo pasar argumentos adicionales a `plotly.express.bar`, como el título o los nombres de los ejes, directamente desde `main.py`.
+2. **Flexibilidad en las Gráficas:** La función `generar_grafica_por_columna` es muy útil. 
+Podrías hacerla aún más flexible permitiendo pasar argumentos adicionales a `plotly.express.bar`, 
+como el título o los nombres de los ejes, directamente desde `main.py`.
