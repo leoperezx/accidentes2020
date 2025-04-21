@@ -36,11 +36,20 @@ A medida que realice los cambios que me parezcan apropiados, seguramente los voy
 ```markdown
 **Organización y Estructura:**
 
-1. **Carpeta para Componentes Streamlit (Opcional pero Recomendable):** Si tu aplicación sigue creciendo y tienes lógica de interfaz de usuario más compleja, podrías considerar crear una carpeta para componentes personalizados de Streamlit. Por ejemplo, podrías tener funciones que generen selectores específicos, tarjetas de información, etc.
+1. **Carpeta para Componentes Streamlit (Opcional pero Recomendable):** Si tu aplicación 
+sigue creciendo y tienes lógica de interfaz de usuario más compleja, podrías considerar 
+crear una carpeta para componentes personalizados de Streamlit. Por ejemplo, podrías tener 
+funciones que generen selectores específicos, tarjetas de información, etc.
 
-2. **Nombres de Archivos Descriptivos:** Los nombres `main.py` y `funciones.py` son bastante genéricos. Si tu archivo de funciones se enfoca en un área específica (ej. `graficos.py`, `mapas.py`, `data_processing.py`), podría ser más explícito a medida que el proyecto crece.
+2. **Nombres de Archivos Descriptivos:** Los nombres `main.py` y `funciones.py` son 
+bastante genéricos. Si tu archivo de funciones se enfoca en un área específica 
+(ej. `graficos.py`, `mapas.py`, `data_processing.py`), podría ser más explícito a 
+medida que el proyecto crece.
 
-3. **Comentarios y Documentación (¡Excelente que ya los tengas!):** Sigue comentando tu código, especialmente las funciones en `funciones.py`. Considera usar docstrings más extensos en las funciones para explicar qué hacen, cuáles son sus argumentos y qué devuelven. Esto facilita la comprensión y el uso futuro de tus funciones.
+3. **Comentarios y Documentación (¡Excelente que ya los tengas!):** Sigue comentando 
+tu código, especialmente las funciones en `funciones.py`. Considera usar docstrings más 
+extensos en las funciones para explicar qué hacen, cuáles son sus argumentos y qué devuelven. 
+Esto facilita la comprensión y el uso futuro de tus funciones.
 
 **Funciones (`funciones.py`):**
 
